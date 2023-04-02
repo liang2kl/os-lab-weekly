@@ -4,7 +4,7 @@ theme: gaia
 # class: invert
 paginate: true
 _paginate: false
-footer: 'week 6 · arceos hello world & ext4'
+footer: 'OS Lab Report · Week 6 · 梁业升'
 backgroundColor: white
 ---
 
@@ -22,7 +22,7 @@ h1, h2 {
     --color-background: #fff;
     --color-foreground: #333;
     --color-highlight: #146C94;
-    --color-dimmed: #146C94CC;
+    --color-dimmed: #00000088;
   }
 </style>
 
@@ -44,7 +44,7 @@ h1, h2 {
 
 ## Arceos Hello World 分析
 
-![bg right:38% contain](week6-acreos-dep.svg)
+![bg right:38% contain](../assets/week6-acreos-dep.svg)
 
 - `axconfig` 定义硬件配置
 - `axhal` 平台相关实现，提供平台无关接口 + 生成链接脚本
@@ -56,7 +56,7 @@ h1, h2 {
 
 ## Arceos Hello World 分析
 
-![bg right:38% contain](week6-acreos-dep.svg)
+![bg right:38% contain](../assets/week6-acreos-dep.svg)
 
 ```rust
 fn main() {
@@ -107,8 +107,6 @@ ext4 的特点（cont.）：
 
 --- 
 
-<!-- _footer: '' -->
-
 ## Ext4 Block/Inode Allocation Policy
 
 **Trick #1: Multi-block Allocator**
@@ -141,7 +139,7 @@ ext4 的特点（cont.）：
 
 ## Ext4 Block/Inode Allocation Policy
 
-![bg right:40% contain](week6-ffs-loc.png)
+![bg right:40% contain](../assets/week6-ffs-loc.png)
 
 **Trick #5: Same Block Group for Directory and Its Content**
 
