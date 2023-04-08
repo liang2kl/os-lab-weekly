@@ -58,7 +58,7 @@ h1, h2 {
 
 ```rust
 pub trait BlockDevice: Send + Sync + Any {
-    const BLOCK_SIZE: usize;
+    fn block_size(&self) -> usize;
     fn read_block(&self, block_id: usize, buf: &mut [u8]);
     fn write_block(&self, block_id: usize, buf: &[u8]);
 }
@@ -67,19 +67,22 @@ pub trait BlockDevice: Send + Sync + Any {
 
 ---
 
-## Block Device 的 Adaptor
+## Block Device 的 Wrapper
 
 ```rust
-impl<B: BlockDevice> BlockDevice for BlockDeviceAdaptor<B> {
-    const BLOCK_SIZE: usize = B::BLOCK_SIZE;
+impl BlockDevice for VirtualBlockDevice {
+    fn block_size(&self) -> usize {
+        self.inner.block_size()
+    }
 
     fn read_block(&self, block_id: usize, buf: &mut [u8]) {
-        assert_eq!(EXT2_BLOCK_SIZE % B::BLOCK_SIZE, 0);
-        let num_inner_blocks = EXT2_BLOCK_SIZE / B::BLOCK_SIZE;
-        for inner_id in 0..num_inner_blocks {
+        let block_size = self.block_size();
+        assert_eq!(EXT2_BLOCK_SIZE % block_size, 0);
+        let inner_num = EXT2_BLOCK_SIZE / block_size;
+        for inner_id in 0..inner_num {
             self.inner.read_block(
-                block_id * num_inner_blocks + inner_id,
-                &mut buf[inner_id * B::BLOCK_SIZE..(inner_id + 1) * B::BLOCK_SIZE],
+                block_id * inner_num + inner_id,
+                &mut buf[inner_id * block_size..(inner_id + 1) * block_size],
             );
         }
     }
@@ -99,7 +102,7 @@ impl<B: BlockDevice> BlockDevice for BlockDeviceAdaptor<B> {
 pub struct FileDevice<const BS: usize>(Mutex<File>);
 
 impl<const BS: usize> BlockDevice for FileDevice<BS> {
-    const BLOCK_SIZE: usize = BS;
+    fn block_size() -> usize { BS }
     ...
 }
 ```
