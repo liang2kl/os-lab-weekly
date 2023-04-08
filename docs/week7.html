@@ -43,7 +43,7 @@
 <li>不影响接入 arceos</li>
 </ul>
 <pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">BlockDevice</span></span>: <span class="hljs-built_in">Send</span> + <span class="hljs-built_in">Sync</span> + Any {
-    <span class="hljs-keyword">const</span> BLOCK_SIZE: <span class="hljs-built_in">usize</span>;
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">block_size</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">usize</span>;
     <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">read_block</span></span>(&amp;<span class="hljs-keyword">self</span>, block_id: <span class="hljs-built_in">usize</span>, buf: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">u8</span>]);
     <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">write_block</span></span>(&amp;<span class="hljs-keyword">self</span>, block_id: <span class="hljs-built_in">usize</span>, buf: &amp;[<span class="hljs-built_in">u8</span>]);
 }
@@ -51,17 +51,20 @@
 <footer>OS Lab Report · Week 7 · 梁业升</footer>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="3" data-marpit-pagination-total="6"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="OS Lab Report · Week 7 · 梁业升" data-background-color="white" data-theme="gaia" data-marpit-pagination="4" data-marpit-pagination-total="6" style="--paginate:true;--footer:OS Lab Report · Week 7 · 梁业升;--background-color:white;--theme:gaia;background-color:white;background-image:none;">
-<h2>Block Device 的 Adaptor</h2>
-<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span>&lt;B: BlockDevice&gt; BlockDevice <span class="hljs-keyword">for</span> BlockDeviceAdaptor&lt;B&gt; {
-    <span class="hljs-keyword">const</span> BLOCK_SIZE: <span class="hljs-built_in">usize</span> = B::BLOCK_SIZE;
+<h2>Block Device 的 Wrapper</h2>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span> BlockDevice <span class="hljs-keyword">for</span> VirtualBlockDevice {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">block_size</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">usize</span> {
+        <span class="hljs-keyword">self</span>.inner.block_size()
+    }
 
     <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">read_block</span></span>(&amp;<span class="hljs-keyword">self</span>, block_id: <span class="hljs-built_in">usize</span>, buf: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">u8</span>]) {
-        <span class="hljs-built_in">assert_eq!</span>(EXT2_BLOCK_SIZE % B::BLOCK_SIZE, <span class="hljs-number">0</span>);
-        <span class="hljs-keyword">let</span> num_inner_blocks = EXT2_BLOCK_SIZE / B::BLOCK_SIZE;
-        <span class="hljs-keyword">for</span> inner_id <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..num_inner_blocks {
+        <span class="hljs-keyword">let</span> block_size = <span class="hljs-keyword">self</span>.block_size();
+        <span class="hljs-built_in">assert_eq!</span>(EXT2_BLOCK_SIZE % block_size, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">let</span> inner_num = EXT2_BLOCK_SIZE / block_size;
+        <span class="hljs-keyword">for</span> inner_id <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..inner_num {
             <span class="hljs-keyword">self</span>.inner.read_block(
-                block_id * num_inner_blocks + inner_id,
-                &amp;<span class="hljs-keyword">mut</span> buf[inner_id * B::BLOCK_SIZE..(inner_id + <span class="hljs-number">1</span>) * B::BLOCK_SIZE],
+                block_id * inner_num + inner_id,
+                &amp;<span class="hljs-keyword">mut</span> buf[inner_id * block_size..(inner_id + <span class="hljs-number">1</span>) * block_size],
             );
         }
     }
@@ -80,7 +83,7 @@
 <pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">FileDevice</span></span>&lt;<span class="hljs-keyword">const</span> BS: <span class="hljs-built_in">usize</span>&gt;(Mutex&lt;File&gt;);
 
 <span class="hljs-keyword">impl</span>&lt;<span class="hljs-keyword">const</span> BS: <span class="hljs-built_in">usize</span>&gt; BlockDevice <span class="hljs-keyword">for</span> FileDevice&lt;BS&gt; {
-    <span class="hljs-keyword">const</span> BLOCK_SIZE: <span class="hljs-built_in">usize</span> = BS;
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">block_size</span></span>() -&gt; <span class="hljs-built_in">usize</span> { BS }
     ...
 }
 </span></span></foreignObject></svg></code></pre>
