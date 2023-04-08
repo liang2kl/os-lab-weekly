@@ -52,6 +52,7 @@ h1, h2 {
 
 - 参考 rCore 中 easy-fs
 - 增加 `BLOCK_SIZE` 以适应与 ext2 的 block size 不同的块设备
+- 不影响接入 arceos
 
 ![bg right:40% contain](../assets/week7-block-size.png)
 
