@@ -40,6 +40,7 @@
 <ul>
 <li>参考 rCore 中 easy-fs</li>
 <li>增加 <code>BLOCK_SIZE</code> 以适应与 ext2 的 block size 不同的块设备</li>
+<li>不影响接入 arceos</li>
 </ul>
 <pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">BlockDevice</span></span>: <span class="hljs-built_in">Send</span> + <span class="hljs-built_in">Sync</span> + Any {
     <span class="hljs-keyword">const</span> BLOCK_SIZE: <span class="hljs-built_in">usize</span>;
