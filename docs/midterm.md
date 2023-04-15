@@ -71,6 +71,7 @@ OS Lab Report · Midterm
     - e.g. data blocks are far away from the inode
 - **Fragmentation**
 
+  ![width:500px](../assets/week8-unix-fragmentation-before.png)
   ![width:500px](../assets/week8-unix-fragmentation.png)
 
 ---
@@ -108,7 +109,7 @@ Allocation policy: **keep related stuff together**
 Certainly all modern systems account for the main lesson of FFS:
 **treat the disk like it’s a disk**.
 
-*Operating System: Three Easy Pieces*
+*Operating Systems: Three Easy Pieces*
 
 ---
 
