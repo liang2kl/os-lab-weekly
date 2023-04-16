@@ -151,6 +151,16 @@ Solution: **write-ahead logging**, or **WAL**
 
 ---
 
+<!-- _header: Design of Related File Systems -->
+
+In conclusion:
+
+- **easyfs**: basic inode-based fs
+- **ext2**: facilitate the block group
+- **ext3**: crash-consistency with journaling
+
+---
+
 <!-- _header: Outline -->
 <!-- _footer: '' -->
 <!-- _class: lead -->
@@ -301,7 +311,7 @@ make A=apps/fs/shell FS=y APP_FEATURES=easyfs run
    - FS Ops
    - Journal
 3. 在用户态进行测试
-4. 发布 crate / 接入 Arceos
+4. 发布 crate/接入 Arceos
 5. 参考现代文件系统进行优化/提出新的优化方案（？）
 
 ---
