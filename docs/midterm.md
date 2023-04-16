@@ -20,8 +20,8 @@ OS Lab Report · Midterm
 <!-- _class: lead -->
 
 1. 相关文件系统的设计思想
-2. Arceos 文件系统模块架构
-3. Easy-fs 在 Arceos 上的移植
+2. ArceOS 文件系统模块架构
+3. Easy-fs 在 ArceOS 上的移植
 4. 后续计划
 
 ---
@@ -31,8 +31,8 @@ OS Lab Report · Midterm
 <!-- _class: lead -->
 
 1. **相关文件系统的设计思想**
-2. Arceos 文件系统模块架构
-3. Easy-fs 在 Arceos 上的移植
+2. ArceOS 文件系统模块架构
+3. Easy-fs 在 ArceOS 上的移植
 4. 后续计划
 
 ---
@@ -166,13 +166,13 @@ In conclusion:
 <!-- _class: lead -->
 
 1. 相关文件系统的设计思想
-2. **Arceos 文件系统模块架构**
-3. Easy-fs 在 Arceos 上的移植
+2. **ArceOS 文件系统模块架构**
+3. Easy-fs 在 ArceOS 上的移植
 4. 后续计划
 
 ---
 
-<!-- header: Arceos 文件系统架构 -->
+<!-- header: ArceOS 文件系统架构 -->
 <!-- footer: '' -->
 
 ![](../assets/week8-arceos-fs.svg)
@@ -185,7 +185,7 @@ In conclusion:
 ---
 
 <!-- header: 例子：切换当前目录 -->
-<!-- footer: Arceos 文件系统架构 -->
+<!-- footer: ArceOS 文件系统架构 -->
 
 ![width:700px](../assets/week8-arceos-fs-mkdir.svg)
 
@@ -204,13 +204,13 @@ In conclusion:
 <!-- _class: lead -->
 
 1. 相关文件系统的设计思想
-2. Arceos 文件系统模块架构
-3. **Easy-fs 在 Arceos 上的移植**
+2. ArceOS 文件系统模块架构
+3. **Easy-fs 在 ArceOS 上的移植**
 4. 后续计划
 
 ---
 
-<!-- header: Easy-fs 在 Arceos 上的移植 -->
+<!-- header: Easy-fs 在 ArceOS 上的移植 -->
 <!-- footer: '' -->
 
 - **提供虚拟文件系统接口**
@@ -282,7 +282,7 @@ In conclusion:
 ---
 
 <!-- _header: Run & Outputs -->
-<!-- footer: Easy-fs 在 Arceos 上的移植 -->
+<!-- footer: Easy-fs 在 ArceOS 上的移植 -->
 
 ```
 make A=apps/fs/shell FS=y APP_FEATURES=easyfs run
@@ -297,8 +297,8 @@ make A=apps/fs/shell FS=y APP_FEATURES=easyfs run
 <!-- _class: lead -->
 
 1. 相关文件系统的设计思想
-2. Arceos 文件系统模块架构
-3. Easy-fs 在 Arceos 上的移植
+2. ArceOS 文件系统模块架构
+3. Easy-fs 在 ArceOS 上的移植
 4. **后续计划**
 
 ---
@@ -311,7 +311,7 @@ make A=apps/fs/shell FS=y APP_FEATURES=easyfs run
    - FS Ops
    - Journal
 3. 在用户态进行测试
-4. 发布 crate/接入 Arceos
+4. 发布 crate/接入 ArceOS
 5. 参考现代文件系统进行优化/提出新的优化方案（？）
 
 ---
