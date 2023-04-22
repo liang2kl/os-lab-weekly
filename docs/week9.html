@@ -14,359 +14,150 @@
 
 /* https://github.com/marp-team/marpit/issues/271 */div#p>svg>foreignObject>section:after{font-weight:700;content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#p>svg>foreignObject>section ul ul{font-size:0.9em}div#p>svg>foreignObject>section.lead h1{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h1 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h2{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h2 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h3{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h3 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h4{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h4 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h5{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h5 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead p{text-align:right}div#p>svg>foreignObject>section header{background-color:#800000;color:#fff;font-size:1em;font-weight:700}div#p>svg>foreignObject>section blockquote{max-width:90%;border-top:0.1em dashed #555;font-size:60%;position:absolute;bottom:20px}div#p>svg>foreignObject>section blockquote:before{content:""}div#p>svg>foreignObject>section blockquote:after{content:""}div#p>svg>foreignObject>section img[alt~=center]{display:block;margin:0 auto}div#p>svg>foreignObject>section code{font-family:'Source Code Pro','SF Mono',monospace}
 
-/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
-<h1>Ext2/3</h1>
+/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-scope-pbJNI8AA] header{height:0px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+<h1>Journal Block Device (JBD)</h1>
 <p><strong>梁业升</strong><br />
-OS Lab Report · Midterm</p>
+OS Lab Report · Week 9</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-header="Outline" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="2" data-marpit-pagination-total="27" style="--paginate:true;--header:Outline;--class:lead;--theme:academic;">
-<header>Outline</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="本周工作" data-theme="academic" data-marpit-pagination="2" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:本周工作;--theme:academic;">
+<header>本周工作</header>
 
 <ol>
-<li>相关文件系统的设计思想</li>
-<li>ArceOS 文件系统模块架构</li>
-<li>Easy-fs 在 ArceOS 上的移植</li>
-<li>后续计划</li>
+<li>研究 Linux 的 Ext3 及 JBD（Journal Block Device）层源码</li>
+<li>JBD 在 Rust 上的部分实现</li>
 </ol>
+<footer>OS Lab Report · Week 9</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-header="Outline" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="3" data-marpit-pagination-total="27" style="--paginate:true;--header:Outline;--class:lead;--theme:academic;">
-<header>Outline</header>
-
-<ol>
-<li><strong>相关文件系统的设计思想</strong></li>
-<li>ArceOS 文件系统模块架构</li>
-<li>Easy-fs 在 ArceOS 上的移植</li>
-<li>后续计划</li>
-</ol>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-header="Design of Related File Systems" data-theme="academic" data-marpit-pagination="4" data-marpit-pagination-total="27" style="--paginate:true;--header:Design of Related File Systems;--theme:academic;">
-<header>Design of Related File Systems</header>
-
-<p><img src="../assets/week8-fs-history.svg" alt="" /></p>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-header="The (Old) UNIX File System" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="27" style="--paginate:true;--header:The (Old) UNIX File System;--footer:Design of related file systems;--theme:academic;">
-<header>The (Old) UNIX File System</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Journaling Block Device Layer" data-theme="academic" data-marpit-pagination="3" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Journaling Block Device Layer;--theme:academic;">
+<header>Journaling Block Device Layer</header>
 
 <ul>
-<li><strong>Inode structure</strong>
-<ul>
-<li>Superblock</li>
-<li>Bitmaps</li>
-<li>Inodes</li>
-<li>Data blocks<br />
-<img src="../assets/week8-unix-structure.png" alt="" style="width:700px;" /></li>
+<li>并不包含在 ext3/ext4 中</li>
+<li>为块设备提供日志功能</li>
+<li>文件系统将修改（事务）发送给 JBD</li>
 </ul>
-</li>
-<li>Multi-level index</li>
-</ul>
-<footer>Design of related file systems</footer>
+<footer>OS Lab Report · Week 9</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-header="The (Old) UNIX File System" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="6" data-marpit-pagination-total="27" style="--paginate:true;--header:The (Old) UNIX File System;--footer:Design of related file systems;--theme:academic;">
-<header>The (Old) UNIX File System</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Ext3 的三种挂载模式" data-theme="academic" data-marpit-pagination="4" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Ext3 的三种挂载模式;--theme:academic;">
+<header>Ext3 的三种挂载模式</header>
+<div class="twocols">
 <ul>
-<li>Inode structure</li>
-<li><strong>Multi-level index</strong>
-<ul>
-<li>Direct</li>
-<li>Indirect</li>
-<li>Double indirect</li>
+<li><code>journal</code>: 元数据和数据都写到日志中</li>
+<li><code>ordered</code>: 只写元数据，数据在写日志前写回磁盘</li>
+<li><code>writeback</code>: 只写元数据，不强制数据先写回</li>
 </ul>
-</li>
-</ul>
-<footer>Design of related file systems</footer>
+<p class="break"></p>
+<p><img src="../assets/week9-jbd-mode.svg" alt="" /></p>
+</div>
+<footer>OS Lab Report · Week 9</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-header="Problems of the UNIX File System" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="27" style="--paginate:true;--header:Problems of the UNIX File System;--footer:Design of related file systems;--theme:academic;">
-<header>Problems of the UNIX File System</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-pbJNI8AA="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../assets/week9-write-jbd.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-marpit-scope-pbJNI8AA="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="content"><footer>Ext3 与 JBD 的交互</footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="5" data-marpit-pagination-total="9"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="6" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
+<header>实现上的问题 &amp; 解决方法</header>
+<div class="twocols">
+<p><strong>问题 1</strong>：对操作系统的要求</p>
+<ul>
+<li>某些功能与操作系统紧耦合，如统一的 buffer 管理</li>
+<li>某些功能需要操作系统的支持，如异步 I/O、条件变量（sleep lock）</li>
+</ul>
+<p class="break"></p>
+<p><strong>解决方法</strong>：增加操作系统抽象层</p>
 <ul>
 <li>
-<p><strong>Poor performance</strong></p>
-<ul>
-<li>2% of disk bandwidth in the worst case</li>
-<li>Main issue: disk is treated as a RAM -- positioning costs
-<ul>
-<li>e.g. data blocks are far away from the inode</li>
-</ul>
-</li>
-</ul>
+<p>使用 trait 对在 Linux 中由操作系统提供的功能进行抽象</p>
 </li>
 <li>
-<p><strong>Fragmentation</strong></p>
-<p><img src="../assets/week8-unix-fragmentation-before.png" alt="" style="width:500px;" /><br />
-<img src="../assets/week8-unix-fragmentation.png" alt="" style="width:500px;" /></p>
-</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-header="Fast File System" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="8" data-marpit-pagination-total="27" style="--paginate:true;--header:Fast File System;--footer:Design of related file systems;--theme:academic;">
-<header>Fast File System</header>
-
-<p><strong>Block groups</strong></p>
-<p><img src="../assets/week8-block-group.png" alt="" style="width:600px;" /></p>
-<ul>
-<li>
-<p>Each group is like a file system</p>
-<p><img src="../assets/week8-ffs-block-group-int.png" alt="" style="width:600px;" /></p>
-</li>
-<li>
-<p>Accessing blocks within the same group is fast</p>
-</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-header="Fast File System" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="9" data-marpit-pagination-total="27" style="--paginate:true;--header:Fast File System;--footer:Design of related file systems;--theme:academic;">
-<header>Fast File System</header>
-<p>Allocation policy: <strong>keep related stuff together</strong></p>
-<ul>
-<li><strong>Directories</strong>: allocate to the group that has
-<ul>
-<li>small number of directories -- unrelated stuff</li>
-<li>large number of free inodes -- related stuff</li>
-</ul>
-</li>
-<li><strong>Files</strong>: allocate the same group for
-<ul>
-<li>inode and data blocks</li>
-<li>files within the same directory</li>
-</ul>
-</li>
-<li><strong>Large files</strong>
-<ul>
-<li>direct blocks follow the rule above</li>
-<li>other large chunks are placed in other groups</li>
-</ul>
-</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-header="Fast File System" data-footer="Design of related file systems" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="10" data-marpit-pagination-total="27" style="--paginate:true;--header:Fast File System;--footer:Design of related file systems;--class:lead;--theme:academic;">
-<header>Fast File System</header>
-
-<p>Certainly all modern systems account for the main lesson of FFS:<br />
-<strong>treat the disk like it’s a disk</strong>.</p>
-<p><em>Operating Systems: Three Easy Pieces</em></p>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-header="Journaling File System (ext3)" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="11" data-marpit-pagination-total="27" style="--paginate:true;--header:Journaling File System (ext3);--footer:Design of related file systems;--theme:academic;">
-<header>Journaling File System (ext3)</header>
-
-<p>Major challenge: <strong>crash-consistency problem</strong></p>
-<p>Solution: <strong>write-ahead logging</strong>, or <strong>WAL</strong></p>
-<ul>
-<li>Write logs before writing to disk</li>
-<li>Place the journal on the disk (for persistence)</li>
-<li>Recover from the journal</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-header="Journaling File System (ext3)" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="12" data-marpit-pagination-total="27" style="--paginate:true;--header:Journaling File System (ext3);--footer:Design of related file systems;--theme:academic;">
-<header>Journaling File System (ext3)</header>
-<ul>
-<li>Every file system operation is a <strong>transaction</strong>
-<ul>
-<li>
-<p>updates on inode, bitmap, data blocks, ...</p>
-<p><img src="../assets/week8-log-structure.png" alt="" style="width:700px;" /></p>
-</li>
-<li>
-<p>atomicity? needs a <strong>two-step</strong> approach</p>
-<p><img src="../assets/week8-atomicity.png" alt="" style="width:700px;" /><br />
-<small>(atomicity of <code>TxE</code> is guaranteed if the size of <code>TxE</code> == 512 bytes)</small></p>
-</li>
-</ul>
-</li>
-<li>After <strong>checkpoints</strong>, the transaction is on disk and the log space can be reused</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="Other Tricks Used in Ext3" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="13" data-marpit-pagination-total="27" style="--paginate:true;--header:Other Tricks Used in Ext3;--footer:Design of related file systems;--theme:academic;">
-<header>Other Tricks Used in Ext3</header>
-
-<ul>
-<li>Batched log updates
-<ul>
-<li>Multiple operations may modify the same data (e.g. the bitmaps)</li>
-</ul>
-</li>
-<li>Circular log
-<ul>
-<li>The log is of a finite size<br />
-<img src="../assets/week8-circular-log.png" alt="" style="width:700px;" /></li>
-</ul>
-</li>
-<li>Metadata journaling
-<ul>
-<li>With data logs: twice the write size</li>
-<li>Only records the metadata modification (inodes, bitmaps, ...)</li>
-<li>Write data blocks to the disk, then write the log</li>
-</ul>
-</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-header="Design of Related File Systems" data-footer="Design of related file systems" data-theme="academic" data-marpit-pagination="14" data-marpit-pagination-total="27" style="--paginate:true;--header:Design of Related File Systems;--footer:Design of related file systems;--theme:academic;">
-<header>Design of Related File Systems</header>
-
-<p>In conclusion:</p>
-<ul>
-<li><strong>easyfs</strong>: basic inode-based fs</li>
-<li><strong>ext2</strong>: facilitate the block group</li>
-<li><strong>ext3</strong>: crash-consistency with journaling</li>
-</ul>
-<footer>Design of related file systems</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-header="Outline" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="15" data-marpit-pagination-total="27" style="--paginate:true;--header:Outline;--class:lead;--theme:academic;">
-<header>Outline</header>
-
-<ol>
-<li>相关文件系统的设计思想</li>
-<li><strong>ArceOS 文件系统模块架构</strong></li>
-<li>Easy-fs 在 ArceOS 上的移植</li>
-<li>后续计划</li>
-</ol>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-header="ArceOS 文件系统架构" data-theme="academic" data-marpit-pagination="16" data-marpit-pagination-total="27" style="--paginate:true;--header:ArceOS 文件系统架构;--theme:academic;">
-<header>ArceOS 文件系统架构</header>
-
-<p><img src="../assets/week8-arceos-fs.svg" alt="" /></p>
-<ul>
-<li><code>libax::fs</code>: 用户库，暴露 <code>axfs::api</code> 接口</li>
-<li><code>axfs::api</code>: 提供给用户程序的 API</li>
-<li><code>axfs::fops</code>: 底层 API</li>
-<li><code>axfs_vfs</code>: 虚拟文件系统接口</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-header="例子：切换当前目录" data-footer="ArceOS 文件系统架构" data-theme="academic" data-marpit-pagination="17" data-marpit-pagination-total="27" style="--paginate:true;--header:例子：切换当前目录;--footer:ArceOS 文件系统架构;--theme:academic;">
-<header>例子：切换当前目录</header>
-
-<p><img src="../assets/week8-arceos-fs-mkdir.svg" alt="" style="width:700px;" /></p>
-<footer>ArceOS 文件系统架构</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-header="编写文档" data-footer="ArceOS 文件系统架构" data-theme="academic" data-marpit-pagination="18" data-marpit-pagination-total="27" style="--paginate:true;--header:编写文档;--footer:ArceOS 文件系统架构;--theme:academic;">
-<header>编写文档</header>
-
-<p><code>doc/apps_fs_shell.md</code></p>
-<p><img src="../assets/week8-docs-repo.png" alt="" style="width:900px;" /></p>
-<footer>ArceOS 文件系统架构</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-header="Outline" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="19" data-marpit-pagination-total="27" style="--paginate:true;--header:Outline;--class:lead;--theme:academic;">
-<header>Outline</header>
-
-<ol>
-<li>相关文件系统的设计思想</li>
-<li>ArceOS 文件系统模块架构</li>
-<li><strong>Easy-fs 在 ArceOS 上的移植</strong></li>
-<li>后续计划</li>
-</ol>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-header="Easy-fs 在 ArceOS 上的移植" data-theme="academic" data-marpit-pagination="20" data-marpit-pagination-total="27" style="--paginate:true;--header:Easy-fs 在 ArceOS 上的移植;--theme:academic;">
-<header>Easy-fs 在 ArceOS 上的移植</header>
-
-<ul>
-<li><strong>提供虚拟文件系统接口</strong>
-<ul>
-<li><code>VfsOps</code> trait for <code>EasyFileSystem</code><pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">root_dir</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; VfsNodeRef
-</span></span></foreignObject></svg></code></pre>
-</li>
-<li><code>VfsNodeOps</code> trait for <code>Inode</code><pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">read_at</span></span>(&amp;<span class="hljs-keyword">self</span>, offset: <span class="hljs-built_in">u64</span>, buf: &amp;<span class="hljs-keyword">mut</span> [<span class="hljs-built_in">u8</span>]) -&gt; VfsResult&lt;<span class="hljs-built_in">usize</span>&gt;
-<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">write_at</span></span>(&amp;<span class="hljs-keyword">self</span>, offset: <span class="hljs-built_in">u64</span>, buf: &amp;[<span class="hljs-built_in">u8</span>]) -&gt; VfsResult&lt;<span class="hljs-built_in">usize</span>&gt;
-...
-</span></span></foreignObject></svg></code></pre>
-</li>
-</ul>
-</li>
-<li>在 <code>axfs</code> 中根据 feature 静态选择根文件系统类型</li>
-<li><code>libax</code> 根据自身 feature 开启 <code>axfs</code> 对应的 feature</li>
-<li>编译应用时传递 feature 给 <code>libax</code></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-header="Easy-fs 在 ArceOS 上的移植" data-theme="academic" data-marpit-pagination="21" data-marpit-pagination-total="27" style="--paginate:true;--header:Easy-fs 在 ArceOS 上的移植;--theme:academic;">
-<header>Easy-fs 在 ArceOS 上的移植</header>
-<ul>
-<li>提供虚拟文件系统接口</li>
-<li><strong>在 <code>axfs</code> 中根据 feature 静态选择根文件系统类型</strong><pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>cfg_if::cfg_if! {
-    <span class="hljs-keyword">if</span> <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;easyfs&quot;</span>)]</span> {
-        <span class="hljs-keyword">let</span> main_fs = fs::easyfs::EasyFileSystem::new(disk);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;fatfs&quot;</span>)]</span> {
-        <span class="hljs-keyword">let</span> main_fs = fs::fatfs::FatFileSystem::new(disk);
-    } <span class="hljs-keyword">else</span> {
-        compile_error!(<span class="hljs-string">&quot;no filesystem is enabled&quot;</span>)
-    }
+<p>实际接入操作系统/用户态程序时实现兼容</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">BufferProvider</span></span>: <span class="hljs-built_in">Send</span> + <span class="hljs-built_in">Sync</span> + Any {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">get_buffer</span></span>(
+        &amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>,
+        dev: Arc&lt;<span class="hljs-keyword">dyn</span> BlockDevice&gt;,
+        block_id: <span class="hljs-built_in">usize</span>
+    ) -&gt; <span class="hljs-built_in">Option</span>&lt;Arc&lt;Mutex&lt;BufferHead&gt;&gt;&gt;;
 }
 </span></span></foreignObject></svg></code></pre>
 </li>
-<li><code>libax</code> 根据自身 feature 开启 <code>axfs</code> 对应的 feature</li>
-<li>编译应用时传递 feature 给 <code>libax</code></li>
 </ul>
+</div>
+<footer>OS Lab Report · Week 9</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-header="Easy-fs 在 ArceOS 上的移植" data-theme="academic" data-marpit-pagination="22" data-marpit-pagination-total="27" style="--paginate:true;--header:Easy-fs 在 ArceOS 上的移植;--theme:academic;">
-<header>Easy-fs 在 ArceOS 上的移植</header>
-
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
+<header>实现上的问题 &amp; 解决方法</header>
+<div class="twocols">
+<p><strong>问题 2</strong>：从 C 到 Rust 的翻译</p>
 <ul>
-<li>提供虚拟文件系统接口</li>
-<li>在 <code>axfs</code> 中根据 feature 静态选择根文件系统类型</li>
-<li><strong><code>libax</code> 根据自身 feature 开启 <code>axfs</code> 对应的 feature</strong><pre><code class="language-toml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment"># ulib/libax/Cargo.toml</span>
-<span class="hljs-attr">fs</span> = [<span class="hljs-string">&quot;alloc&quot;</span>, <span class="hljs-string">&quot;axruntime/fs&quot;</span>, <span class="hljs-string">&quot;dep:axfs&quot;</span>]
-<span class="hljs-attr">fs_easyfs</span> = [<span class="hljs-string">&quot;axfs?/easyfs&quot;</span>]
-<span class="hljs-attr">fs_fatfs</span> = [<span class="hljs-string">&quot;axfs?/fatfs&quot;</span>]
-</span></span></foreignObject></svg></code></pre>
-</li>
-<li>编译应用时传递 feature 给 <code>libax</code></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-header="Easy-fs 在 ArceOS 上的移植" data-theme="academic" data-marpit-pagination="23" data-marpit-pagination-total="27" style="--paginate:true;--header:Easy-fs 在 ArceOS 上的移植;--theme:academic;">
-<header>Easy-fs 在 ArceOS 上的移植</header>
-
-<ul>
-<li>提供虚拟文件系统接口</li>
-<li>在 <code>axfs</code> 中根据 feature 静态选择根文件系统类型</li>
-<li><code>libax</code> 根据自身 feature 开启 <code>axfs</code> 对应的 feature</li>
-<li><strong>编译应用时传递 feature 给 <code>libax</code></strong><pre><code class="language-toml"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment"># apps/fs/shell/Cargo.toml</span>
-<span class="hljs-section">[features]</span>
-<span class="hljs-attr">fatfs</span> = [<span class="hljs-string">&quot;libax/fs_fatfs&quot;</span>]
-<span class="hljs-attr">easyfs</span> = [<span class="hljs-string">&quot;libax/fs_easyfs&quot;</span>]
-
-<span class="hljs-section">[dependencies]</span>
-<span class="hljs-attr">libax</span> = { path = <span class="hljs-string">&quot;../../../ulib/libax&quot;</span>, features = [<span class="hljs-string">&quot;fs&quot;</span>] }
+<li>某些数据结构（如链表）的 Rust 实现与 C 差别很大</li>
+<li>所有权与生命周期使得数据共享较为复杂</li>
+<li>goto 语句的翻译较为复杂<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-symbol">&#x27;l1</span>: <span class="hljs-keyword">loop</span> {
+  <span class="hljs-keyword">continue</span> <span class="hljs-symbol">&#x27;l1</span> <span class="hljs-comment">// goto</span>
+  <span class="hljs-keyword">break</span>;
+}
 </span></span></foreignObject></svg></code></pre>
 </li>
 </ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-header="Run &amp; Outputs" data-footer="Easy-fs 在 ArceOS 上的移植" data-theme="academic" data-marpit-pagination="24" data-marpit-pagination-total="27" style="--paginate:true;--header:Run &amp; Outputs;--footer:Easy-fs 在 ArceOS 上的移植;--theme:academic;">
-<header>Run &amp; Outputs</header>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>make A=apps/fs/shell FS=y APP_FEATURES=easyfs run
+<p class="break"></p>
+<p><strong>机遇</strong>：更可靠的实现</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>spin_lock(&amp;journal-&gt;j_state_lock);
+sb-&gt;s_sequence = cpu_to_be32(journal-&gt;j_tail_sequence);
+sb-&gt;s_start    = cpu_to_be32(journal-&gt;j_tail);
+sb-&gt;s_errno    = cpu_to_be32(journal-&gt;j_errno);
+spin_unlock(&amp;journal-&gt;j_state_lock);
 </span></span></foreignObject></svg></code></pre>
-<p><img src="../assets/week8-acreos-easyfs.png" alt="" style="width:700px;" /></p>
-<footer>Easy-fs 在 ArceOS 上的移植</footer>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> states = <span class="hljs-keyword">self</span>.states.lock();
+sb.sequence = states.tail_sequence.to_be();
+sb.start = states.tail.to_be();
+sb.errno = states.errno.to_be();
+<span class="hljs-built_in">drop</span>(states) <span class="hljs-comment">// unlock</span>
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>OS Lab Report · Week 9</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-header="Outline" data-class="lead" data-theme="academic" class="lead" data-marpit-pagination="25" data-marpit-pagination-total="27" style="--paginate:true;--header:Outline;--class:lead;--theme:academic;">
-<header>Outline</header>
-
-<ol>
-<li>相关文件系统的设计思想</li>
-<li>ArceOS 文件系统模块架构</li>
-<li>Easy-fs 在 ArceOS 上的移植</li>
-<li><strong>后续计划</strong></li>
-</ol>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-header="后续计划" data-theme="academic" data-marpit-pagination="26" data-marpit-pagination-total="27" style="--paginate:true;--header:后续计划;--theme:academic;">
-<header>后续计划</header>
-
-<ol>
-<li>研究 ext2/ext3 源码</li>
-<li>分工完成 ext2/ext3 实现
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-header="目前进展" data-theme="academic" data-marpit-pagination="8" data-marpit-pagination-total="9" style="--paginate:true;--header:目前进展;--theme:academic;">
+<header>目前进展</header>
+<small>
+<div class="twocols">
 <ul>
-<li>FS Ops</li>
-<li>Journal</li>
+<li>基本架构设计
+<ul>
+<li>磁盘数据结构</li>
+<li>配置（C 中的宏定义）</li>
+<li>系统兼容层</li>
+<li>日志管理</li>
+<li>事务处理</li>
 </ul>
 </li>
-<li>在用户态进行测试</li>
-<li>发布 crate/接入 ArceOS</li>
-<li>参考现代文件系统进行优化/提出新的优化方案（？）</li>
-</ol>
+<li>日志管理
+<ul>
+<li><code>init_dev</code>：构造内存中的 journal 对象</li>
+<li><code>create</code>：在磁盘上创建日志结构</li>
+<li><code>load</code>：读取磁盘上的日志结构</li>
+<li><code>recover</code>：故障恢复</li>
+<li><code>wipe</code>：擦除已有的日志</li>
+</ul>
+</li>
+</ul>
+<p class="break"></p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>.
+└── src
+    ├── disk.rs
+    ├── config.rs
+    ├── sal.rs
+    ├── journal.rs
+    ├── tx.rs
+    ├── ...
+</span></span></foreignObject></svg></code></pre>
+</div>
+</small>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
-<h2>Thanks! Questions?</h2>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="下周计划" data-theme="academic" data-marpit-pagination="9" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:下周计划;--theme:academic;">
+<header>下周计划</header>
+
+<ul>
+<li>完善架构设计</li>
+<li>继续实现 JBD：事务处理</li>
+</ul>
+<footer>OS Lab Report · Week 9</footer>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.7.0/lib/bespoke.js.LICENSE.txt */
