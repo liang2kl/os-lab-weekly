@@ -125,6 +125,10 @@ div.twocols {
   column-count: 2;
 }
 
+p.break + * {
+  margin-top: 0;
+}
+
 div.twocols p:first-child,
 div.twocols h1:first-child,
 div.twocols h2:first-child,
