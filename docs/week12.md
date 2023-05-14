@@ -13,6 +13,8 @@ footer: OS Lab Report · Week 12
 2. 基本实现日志的 commit（即日志写回到磁盘）
 3. 重构用户态测试
 
+目前问题：Linux 的实现比较复杂
+
 ---
 
 <!-- _header: 下周工作 -->
