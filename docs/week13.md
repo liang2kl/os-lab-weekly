@@ -11,8 +11,8 @@ footer: OS Lab Report · Week 13
 <small>
 
 1. 完成日志的 commit（即日志写回到磁盘）
-   - 数据块（调用 `Journal::dirty_data`）：直接写回原位置（对应 ext3 的 ordered/writeback 模式）
-   - 元数据块（调用 `Journal::dirty_metadata`）：写到日志中
+   - 数据块（调用 `Handle::dirty_data`）：直接写回原位置（对应 ext3 的 ordered/writeback 模式）
+   - 元数据块（调用 `Handle::dirty_metadata`）：写到日志中
      - 原有缓存保存到 `Shadow` 队列中，用于 checkpoint 时写回原位置
      - 复制一份保存到 `IO` 队列中，用于写入日志
 
