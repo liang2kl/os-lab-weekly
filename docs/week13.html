@@ -21,10 +21,10 @@
 <li>完成日志的 commit（即日志写回到磁盘）
 <ul>
 <li>
-<p>数据块（调用 <code>Journal::dirty_data</code>）：直接写回原位置（对应 ext3 的 ordered/writeback 模式）</p>
+<p>数据块（调用 <code>Handle::dirty_data</code>）：直接写回原位置（对应 ext3 的 ordered/writeback 模式）</p>
 </li>
 <li>
-<p>元数据块（调用 <code>Journal::dirty_metadata</code>）：写到日志中</p>
+<p>元数据块（调用 <code>Handle::dirty_metadata</code>）：写到日志中</p>
 <ul>
 <li>原有缓存保存到 <code>Shadow</code> 队列中，用于 checkpoint 时写回原位置</li>
 <li>复制一份保存到 <code>IO</code> 队列中，用于写入日志</li>
