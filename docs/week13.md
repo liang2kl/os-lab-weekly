@@ -5,40 +5,45 @@ paginate: false
 footer: OS Lab Report · Week 13
 ---
 
-<!-- _header: 第 13 周工作 -->
+<!-- header: 第 13 周工作 -->
+<!-- _footer: '' -->
+
+<small>
 
 1. 完成日志的 commit（即日志写回到磁盘）
-   - 数据块：直接写回原位置（对应 ext3 的 ordered/writeback 模式）
-   - 元数据块：写到日志中
-     日志结构：
-     ```
-     D: Descriptor    M: Metadata    C: Commit
-     | D | M | M | ... | D | M | M | C |
-     ``` 
-     - Descriptor 块：记录每个 Metadata 块的信息（是否 escape、是否是最后一个 tag 等）
-     - Metadata 块：保存元数据
-     - Commit 块：事务结束标志（确保之前块写入磁盘后才写入）
+   - 数据块（调用 `Journal::dirty_data`）：直接写回原位置（对应 ext3 的 ordered/writeback 模式）
+   - 元数据块（调用 `Journal::dirty_metadata`）：写到日志中
+     - 原有缓存保存到 `Shadow` 队列中，用于 checkpoint 时写回原位置
+     - 复制一份保存到 `IO` 队列中，用于写入日志
+
+      日志磁盘结构：
+
+      ```
+      D: Descriptor    M: Metadata    C: Commit
+      | D | M | M | ... | M | D | M | M | C |
+      ``` 
+
+      - Descriptor 块：事务开始标记，记录每个 Metadata 块的信息
+      - Metadata 块：保存元数据
+      - Commit 块：事务结束标志（确保之前块写入磁盘后才写入）
+
+</small>
 
 ---
 
-<!-- _header: 第 13 周工作 -->
+<!-- _footer: '' -->
 
-1. 完成日志的 commit（即日志写回到磁盘）
-   ...
-2. 完成部分的 checkpoint 功能（即将日志中的内容写回到文件系统）
-3. 对文件系统调用日志模块的过程进行测试
-
----
-
-<!-- _header: 第 13 周工作 -->
-
-3. 对文件系统调用日志模块的过程进行测试（可以正常运行）
+1. 对文件系统调用日志模块的过程进行测试（可以正常运行）
    ```rust
+   // Initialize journal structure
    let journal = Journal::init_dev(...);
-   let mut handle = journal.start();
-   // Write a random block.
-   let meta_buf = write_random_block(...);
 
+   // Write a random block.
+   let buf = get_cache(...);
+   buf.mark_dirty();
+
+   // Create a handle for submitting buffers
+   let mut handle = journal.start();
    // Record the buffer in the journal
    handle.get_write_access(&meta_buf);
    handle.dirty_metadata(&meta_buf);
@@ -49,8 +54,9 @@ footer: OS Lab Report · Week 13
 
 ---
 
-<!-- _header: 第 13 周工作 -->
 <!-- _footer: '' -->
+
+<small>
 
 问题：
 - 可能无法实现一些功能
@@ -64,6 +70,7 @@ footer: OS Lab Report · Week 13
 
 1. Checkpoint（将日志中的内容写回到文件系统）
 2. Recover（从崩溃中恢复）
+
 
 ---
 
