@@ -14,161 +14,43 @@
 
 /* https://github.com/marp-team/marpit/issues/271 */div#p>svg>foreignObject>section:after{font-weight:700;content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#p>svg>foreignObject>section ul ul{font-size:0.9em}div#p>svg>foreignObject>section.lead h1{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h1 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h2{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h2 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h3{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h3 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h4{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h4 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h5{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h5 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead p{text-align:right}div#p>svg>foreignObject>section header{background-color:#800000;color:#fff;font-size:1em;font-weight:700}div#p>svg>foreignObject>section blockquote{max-width:90%;border-top:0.1em dashed #555;font-size:60%;position:absolute;bottom:20px}div#p>svg>foreignObject>section blockquote:before{content:""}div#p>svg>foreignObject>section blockquote:after{content:""}div#p>svg>foreignObject>section img[alt~=center]{display:block;margin:0 auto}div#p>svg>foreignObject>section code{font-family:'Source Code Pro','SF Mono',monospace}
 
-/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section p.break+*{margin-top:0}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-scope-oZyinc0z] header{height:0px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
-<h1>Journaling Block Device (JBD)</h1>
-<p><strong>梁业升</strong><br />
-OS Lab Report · Week 9</p>
+/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section p.break+*{margin-top:0}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-footer="OS Lab Report · Week 14" data-header="第 14 周工作" data-theme="academic" style="--footer:OS Lab Report · Week 14;--header:第 14 周工作;--theme:academic;">
+<header>第 14 周工作</header>
+<small>
+<ol>
+<li>完成日志的 checkpoint 功能（将日志中的内容写回到文件系统）</li>
+<li>完成日志的 revoke 功能
+<ul>
+<li>对应情形：
+<ul>
+<li>元数据可能被存在数据块中，如文件夹 / indirect block（<strong>写日志</strong>）</li>
+<li>删除这些数据后数据块可被复用</li>
+<li>如果被新文件的数据（<strong>不写日志</strong>）覆盖，会出现问题：</li>
+<li>在 redo 时，旧的元数据覆盖了新的数据，新的数据永远无法恢复</li>
+</ul>
+</li>
+<li>解决方法：
+<ul>
+<li>删除储存在数据块中的元数据时，在日志中增加一个 revoke 块</li>
+<li>避免对 revoke 块进行 redo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开始接入 ext2</li>
+</ol>
+</small>
+<footer>OS Lab Report · Week 14</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="本周工作" data-theme="academic" data-marpit-pagination="2" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:本周工作;--theme:academic;">
-<header>本周工作</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-footer="OS Lab Report · Week 14" data-header="下周计划" data-theme="academic" style="--footer:OS Lab Report · Week 14;--header:下周计划;--theme:academic;">
+<header>下周计划</header>
 
 <ol>
-<li>研究 Linux 的 Ext3 及 JBD（Journaling Block Device）层源码</li>
-<li>JBD 在 Rust 上的部分实现</li>
+<li>完成 recover 功能</li>
+<li>完成测试并尝试合并入上游</li>
+<li>合作将日志模块接入 ext2</li>
 </ol>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Journaling Block Device Layer" data-theme="academic" data-marpit-pagination="3" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Journaling Block Device Layer;--theme:academic;">
-<header>Journaling Block Device Layer</header>
-
-<ul>
-<li>并不包含在 ext3/ext4 中</li>
-<li>为块设备提供日志功能</li>
-<li>文件系统将修改（事务）发送给 JBD</li>
-</ul>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>-------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C                                6            916           2274           4150
-C/C++ Header                     1            160            475            397
-make                             1              2              3              2
--------------------------------------------------------------------------------
-SUM:                             8           1078           2752           4549
--------------------------------------------------------------------------------
-</span></span></foreignObject></svg></code></pre>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Ext3 的三种挂载模式" data-theme="academic" data-marpit-pagination="4" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Ext3 的三种挂载模式;--theme:academic;">
-<header>Ext3 的三种挂载模式</header>
-<div class="twocols">
-<ul>
-<li><code>journal</code>: 元数据和数据都写到日志中</li>
-<li><code>ordered</code>: 只写元数据，数据在写日志前写回磁盘</li>
-<li><code>writeback</code>: 只写元数据，不强制数据先写回</li>
-</ul>
-<p class="break"></p>
-<p><img src="../assets/week9-jbd-mode.svg" alt="" /></p>
-</div>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-oZyinc0z="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../assets/week9-write-jbd.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-marpit-scope-oZyinc0z="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="content"><footer>Ext3 与 JBD 的交互</footer>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="5" data-marpit-pagination-total="9"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="6" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
-<header>实现上的问题 &amp; 解决方法</header>
-<div class="twocols">
-<p><strong>问题 1</strong>：对操作系统的要求</p>
-<ul>
-<li>某些功能与操作系统紧耦合，如统一的 buffer 管理</li>
-<li>某些功能需要操作系统的支持，如异步 I/O、条件变量（sleep lock）</li>
-</ul>
-<p class="break"></p>
-<p><strong>解决方法</strong>：增加操作系统抽象层</p>
-<ul>
-<li>使用 trait 对在 Linux 中由操作系统提供的功能进行抽象</li>
-<li>实际接入操作系统/用户态程序时实现兼容</li>
-</ul>
-</div>
-<p><img src="../assets/week9-sal.svg" alt="" /></p>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
-<header>实现上的问题 &amp; 解决方法</header>
-<div class="twocols">
-<p><strong>问题 2</strong>：从 C 到 Rust 的翻译</p>
-<ul>
-<li>某些数据结构（如链表）的 Rust 实现与 C 差别很大</li>
-<li>所有权与生命周期使得数据共享较为复杂</li>
-<li>goto 语句的翻译较为复杂<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-symbol">&#x27;l1</span>: <span class="hljs-keyword">loop</span> {
-  <span class="hljs-keyword">continue</span> <span class="hljs-symbol">&#x27;l1</span> <span class="hljs-comment">// goto</span>
-  <span class="hljs-keyword">break</span>;
-}
-</span></span></foreignObject></svg></code></pre>
-</li>
-</ul>
-<p class="break"></p>
-<p><strong>机遇</strong>：更可靠的实现</p>
-<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>spin_lock(&amp;journal-&gt;j_state_lock);
-sb-&gt;s_sequence = cpu_to_be32(journal-&gt;j_tail_sequence);
-sb-&gt;s_start    = cpu_to_be32(journal-&gt;j_tail);
-sb-&gt;s_errno    = cpu_to_be32(journal-&gt;j_errno);
-spin_unlock(&amp;journal-&gt;j_state_lock);
-</span></span></foreignObject></svg></code></pre>
-<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> states = <span class="hljs-keyword">self</span>.states.lock();
-sb.sequence = states.tail_sequence.to_be();
-sb.start = states.tail.to_be();
-sb.errno = states.errno.to_be();
-<span class="hljs-built_in">drop</span>(states) <span class="hljs-comment">// unlock</span>
-</span></span></foreignObject></svg></code></pre>
-</div>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="目前进展" data-theme="academic" data-marpit-pagination="8" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:目前进展;--theme:academic;">
-<header>目前进展</header>
-<small>
-<div class="twocols">
-<ul>
-<li>基本架构设计
-<ul>
-<li>磁盘数据结构</li>
-<li>配置（C 中的宏定义）</li>
-<li>系统兼容层</li>
-<li>日志管理</li>
-<li>事务处理</li>
-</ul>
-</li>
-<li>日志管理
-<ul>
-<li><code>init_dev</code>：构造内存中的 journal 对象</li>
-<li><code>create</code>：在磁盘上创建日志结构</li>
-<li><code>load</code>：读取磁盘上的日志结构</li>
-<li><code>recover</code>：故障恢复</li>
-<li><code>wipe</code>：擦除已有的日志</li>
-</ul>
-</li>
-</ul>
-<p class="break"></p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>.
-└── src
-    ├── disk.rs
-    ├── config.rs
-    ├── sal.rs
-    ├── journal.rs
-    ├── tx.rs
-    ├── ...
-</span></span></foreignObject></svg></code></pre>
-</div>
-</small>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="下周计划 &amp; 总体目标" data-theme="academic" data-marpit-pagination="9" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:下周计划 &amp; 总体目标;--theme:academic;">
-<header>下周计划 &amp; 总体目标</header>
-
-<ul>
-<li>完善架构设计</li>
-<li>继续实现 JBD：事务处理</li>
-</ul>
-<p>目标：</p>
-<ul>
-<li>实现 Ext3 并接入 ArceOS</li>
-<li>可替换 Linux 中的紧耦合 JBD 模块
-<ul>
-<li>与已有的文件系统（Ext3/4 等）兼容</li>
-<li>对抽象层设计与实现要求较高</li>
-</ul>
-</li>
-<li>可替换 Linux 中的 Ext3</li>
-</ul>
-<footer>OS Lab Report · Week 9</footer>
+<footer>OS Lab Report · Week 14</footer>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.7.0/lib/bespoke.js.LICENSE.txt */
