@@ -20,8 +20,8 @@
 <ol>
 <li>完成日志 Recovery 功能</li>
 <li>通过测试初步验证日志实现的正确性</li>
-<li>（重新）将 EasyFS 作为用户程序接入 ArceOS</li>
 <li>为 EasyFS 添加日志功能（in progress...）</li>
+<li>（重新）将 EasyFS 作为用户程序接入 ArceOS</li>
 </ol>
 <footer>OS Lab Report · Week 15</footer>
 </section>
@@ -63,18 +63,78 @@
 </span></span></foreignObject></svg></code></pre>
 </small>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-footer="OS Lab Report · Week 15" data-header="第 15 周工作" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:第 15 周工作;--theme:academic;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-header="第 15 周工作" data-theme="academic" style="--header:第 15 周工作;--theme:academic;">
 <header>第 15 周工作</header>
+
 <p><strong>3. 为 EasyFS 添加日志功能（in progress...）</strong></p>
-<p><strong>主要问题</strong>：JBD 只考虑单线程情形，在 Rust 中与多线程实现的文件系统（如目前的 Ext2）很难兼容</p>
+<p><strong>主要问题</strong>：JBD 只考虑单线程情形，与 Rust 实现的多线程文件系统（如目前的 Ext2）很难兼容</p>
 <small>
-<p>如：文件系统的 Cache manager 返回 <code>Arc&lt;Mutex&lt;Buffer&gt;&gt;</code>，而 JBD 接口参数为 <code>Rc&lt;RefCell&lt;Buffer&gt;&gt;</code><br />
-（C 语言此问题较容易解决）</p>
+<p>如：文件系统的 cache manager 返回 <code>Arc&lt;Mutex&lt;...&gt;&gt;</code>：</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">get_block_cache</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>, block_id: <span class="hljs-built_in">usize</span>, block_device: Arc&lt;<span class="hljs-keyword">dyn</span> BlockDevice&gt;,) -&gt; Arc&lt;Mutex&lt;BlockCache&gt;&gt;
+</span></span></foreignObject></svg></code></pre>
+<p>而 JBD 接口参数为 <code>Rc&lt;...&gt;</code>：</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">get_write_access</span></span>(&amp;<span class="hljs-keyword">self</span>, buf: &amp;Rc&lt;<span class="hljs-keyword">dyn</span> Buffer&gt;) -&gt; JBDResult
+</span></span></foreignObject></svg></code></pre>
+<p>（C 语言此问题较容易解决）</p>
 </small>
 <p><u>目前：退而求其次，将 EasyFS 变成只支持单线程</u></p>
-<footer>OS Lab Report · Week 15</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer="OS Lab Report · Week 15" data-header="第 15 周工作" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:第 15 周工作;--theme:academic;">
+<header>第 15 周工作</header>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> journal = jbd::Journal::init_dev(
+    provider,
+    block_device.clone(),
+    block_device.clone(),
+    total_blocks,
+    JOURNAL_SIZE,
+)
+.unwrap();
+
+<span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+journal.create().unwrap();
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> efs = <span class="hljs-keyword">Self</span> {
+    block_device: Rc::clone(&amp;block_device),
+    inode_bitmap,
+    data_bitmap,
+    inode_area_start_block: <span class="hljs-number">1</span> + inode_bitmap_blocks,
+    data_area_start_block: <span class="hljs-number">1</span> + inode_total_blocks + data_bitmap_blocks,
+    journal_start_block: total_blocks,
+    journal_size: JOURNAL_SIZE,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    journal: Rc::new(RefCell::new(journal)),
+};
+</span></span></foreignObject></svg></code></pre>
+<footer>OS Lab Report · Week 15</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="OS Lab Report · Week 15" data-header="第 15 周工作" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:第 15 周工作;--theme:academic;">
+<header>第 15 周工作</header>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">increase_size</span></span>(
+    &amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>,
+    new_size: <span class="hljs-built_in">u32</span>,
+    new_blocks: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">u32</span>&gt;,
+    block_device: &amp;Rc&lt;<span class="hljs-keyword">dyn</span> BlockDevice&gt;,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span> disk_inode_block_id: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span> handle: &amp;<span class="hljs-keyword">mut</span> jbd::Handle,
+) {
+    ...
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    <span class="hljs-keyword">let</span> buf = get_buffer_dyn(block_device, <span class="hljs-keyword">self</span>.indirect1 <span class="hljs-keyword">as</span> <span class="hljs-built_in">usize</span>).unwrap();
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    handle.get_write_access(&amp;buf).unwrap();
+
+    <span class="hljs-comment">// fill indirect1</span>
+    get_block_cache(<span class="hljs-keyword">self</span>.indirect1 <span class="hljs-keyword">as</span> <span class="hljs-built_in">usize</span>, Rc::clone(block_device)).modify(...);
+
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    handle.dirty_metadata(&amp;buf).unwrap();
+    ...
+}
+</span></span></foreignObject></svg></code></pre>
+<footer>OS Lab Report · Week 15</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-footer="OS Lab Report · Week 15" data-header="第 15 周工作" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:第 15 周工作;--theme:academic;">
 <header>第 15 周工作</header>
 <p><strong>4.（重新）将 EasyFS 作为用户程序接入 ArceOS</strong></p>
 <div class="twocols">
@@ -109,11 +169,17 @@
 </div>
 <footer>OS Lab Report · Week 15</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-footer="OS Lab Report · Week 15" data-header="下周计划" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:下周计划;--theme:academic;">
-<header>下周计划</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-footer="OS Lab Report · Week 15" data-header="目前成果 &amp; 下周计划" data-theme="academic" style="--footer:OS Lab Report · Week 15;--header:目前成果 &amp; 下周计划;--theme:academic;">
+<header>目前成果 &amp; 下周计划</header>
 
+<p><strong>目前成果</strong></p>
 <ol>
-<li>完成带有日志功能的 EasyFS 并进行测试</li>
+<li>参考 Linux 完成单线程 JBD 层，为文件系统提供日志支持</li>
+<li>在 JBD 内部进行若干功能测试</li>
+</ol>
+<p><strong>下周计划</strong></p>
+<ol>
+<li>完成带有日志功能的 EasyFS 并进行测试（正确性、性能）</li>
 <li>将单线程版本 JBD 以及对应的 EasyFS 用户程序提交到上游</li>
 </ol>
 <footer>OS Lab Report · Week 15</footer>
