@@ -10,3 +10,4 @@
 - [第 13 周](https://liang2kl.github.io/os-lab-weekly/docs/week13)
 - [第 14 周](https://liang2kl.github.io/os-lab-weekly/docs/week14)
 - [第 15 周](https://liang2kl.github.io/os-lab-weekly/docs/week15)
+- [期末报告](https://liang2kl.github.io/os-lab-weekly/docs/final)
