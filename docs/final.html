@@ -14,161 +14,377 @@
 
 /* https://github.com/marp-team/marpit/issues/271 */div#p>svg>foreignObject>section:after{font-weight:700;content:attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total)}div#p>svg>foreignObject>section ul ul{font-size:0.9em}div#p>svg>foreignObject>section.lead h1{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h1 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h2{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h2 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h3{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h3 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h4{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h4 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead h5{color:#800000;text-align:left}div#p>svg>foreignObject>section.lead h5 strong{-webkit-text-stroke:1px #800000}div#p>svg>foreignObject>section.lead p{text-align:right}div#p>svg>foreignObject>section header{background-color:#800000;color:#fff;font-size:1em;font-weight:700}div#p>svg>foreignObject>section blockquote{max-width:90%;border-top:0.1em dashed #555;font-size:60%;position:absolute;bottom:20px}div#p>svg>foreignObject>section blockquote:before{content:""}div#p>svg>foreignObject>section blockquote:after{content:""}div#p>svg>foreignObject>section img[alt~=center]{display:block;margin:0 auto}div#p>svg>foreignObject>section code{font-family:'Source Code Pro','SF Mono',monospace}
 
-/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section p.break+*{margin-top:0}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-scope-rO9Ak6k3] header{height:0px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+/* two-column support */div#p>svg>foreignObject>section div.twocols{margin-top:35px;column-count:2}div#p>svg>foreignObject>section p.break+*{margin-top:0}div#p>svg>foreignObject>section div.twocols h1:first-child,div#p>svg>foreignObject>section div.twocols h2:first-child,div#p>svg>foreignObject>section div.twocols p:first-child,div#p>svg>foreignObject>section div.twocols ul li p:first-child,div#p>svg>foreignObject>section div.twocols ul li:first-child,div#p>svg>foreignObject>section div.twocols ul:first-child{margin-top:0!important}div#p>svg>foreignObject>section div.twocols p.break{break-before:column;margin-top:0}div#p>svg>foreignObject>section[data-marpit-scope-jiqmPROU] header{height:0px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
 <h1>Journaling Block Device (JBD)</h1>
 <p><strong>梁业升</strong><br />
-OS Lab Report · Week 9</p>
+OS Lab Final Report</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="本周工作" data-theme="academic" data-marpit-pagination="2" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:本周工作;--theme:academic;">
-<header>本周工作</header>
-
-<ol>
-<li>研究 Linux 的 Ext3 及 JBD（Journaling Block Device）层源码</li>
-<li>JBD 在 Rust 上的部分实现</li>
-</ol>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Journaling Block Device Layer" data-theme="academic" data-marpit-pagination="3" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Journaling Block Device Layer;--theme:academic;">
-<header>Journaling Block Device Layer</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="OS Lab Final Report" data-header="主要成果" data-theme="academic" data-marpit-pagination="2" data-marpit-pagination-total="24" style="--paginate:true;--footer:OS Lab Final Report;--header:主要成果;--theme:academic;">
+<header>主要成果</header>
 
 <ul>
-<li>并不包含在 ext3/ext4 中</li>
-<li>为块设备提供日志功能</li>
-<li>文件系统将修改（事务）发送给 JBD</li>
+<li>支持单线程的 JBD 独立模块，支持任意文件系统增加日志功能</li>
+<li>为 EasyFS 增加日志功能并接入 ArceOS</li>
 </ul>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>-------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C                                6            916           2274           4150
-C/C++ Header                     1            160            475            397
-make                             1              2              3              2
--------------------------------------------------------------------------------
-SUM:                             8           1078           2752           4549
--------------------------------------------------------------------------------
-</span></span></foreignObject></svg></code></pre>
-<footer>OS Lab Report · Week 9</footer>
+<footer>OS Lab Final Report</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="Ext3 的三种挂载模式" data-theme="academic" data-marpit-pagination="4" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:Ext3 的三种挂载模式;--theme:academic;">
-<header>Ext3 的三种挂载模式</header>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+<h2>JBD 介绍</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="JBD 介绍" data-header="JBD (Journaling Block Device)" data-theme="academic" data-marpit-pagination="4" data-marpit-pagination-total="24" style="--paginate:true;--footer:JBD 介绍;--header:JBD (Journaling Block Device);--theme:academic;">
+<header>JBD (Journaling Block Device)</header>
+
+<p><strong>什么是 JBD?</strong></p>
+<ul>
+<li>Linux 中文件系统无关的日志模块</li>
+<li>ext3, ext4, OCFS2, ...</li>
+</ul>
+<p><strong>主要概念</strong></p>
+<ul>
+<li>Handle：记录文件系统的一个原子操作，如 <code>write()</code></li>
+<li>Transaction：一个或多个原子操作，统一处理（性能）</li>
+<li>Commit：将日志写回磁盘</li>
+<li>Checkpoint：将日志对应的缓存写回文件系统</li>
+</ul>
+<footer>JBD 介绍</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-footer="JBD 介绍" data-header="Data Journaling &amp; Metadata Journaling" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="24" style="--paginate:true;--footer:JBD 介绍;--header:Data Journaling &amp; Metadata Journaling;--theme:academic;">
+<header>Data Journaling &amp; Metadata Journaling</header>
 <div class="twocols">
 <ul>
-<li><code>journal</code>: 元数据和数据都写到日志中</li>
-<li><code>ordered</code>: 只写元数据，数据在写日志前写回磁盘</li>
-<li><code>writeback</code>: 只写元数据，不强制数据先写回</li>
+<li>数据日志：元数据和数据写日志</li>
+<li>元数据日志：元数据写日志，数据直接写回</li>
+</ul>
+<p>JBD 中提供两个接口：</p>
+<ul>
+<li><code>journal_dirty_metadata</code>：元数据 == 写日志的数据</li>
+<li><code>journal_dirty_data</code>：数据 == 写回的数据</li>
 </ul>
 <p class="break"></p>
 <p><img src="../assets/week9-jbd-mode.svg" alt="" /></p>
 </div>
-<footer>OS Lab Report · Week 9</footer>
+<footer>JBD 介绍</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-rO9Ak6k3="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../assets/week9-write-jbd.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="5" data-marpit-scope-rO9Ak6k3="" data-paginate="true" data-footer="Ext3 与 JBD 的交互" data-theme="academic" data-marpit-pagination="5" data-marpit-pagination-total="9" style="--paginate:true;--footer:Ext3 与 JBD 的交互;--theme:academic;" data-marpit-advanced-background="content"><footer>Ext3 与 JBD 的交互</footer>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="5" data-marpit-pagination-total="9"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="6" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
-<header>实现上的问题 &amp; 解决方法</header>
-<div class="twocols">
-<p><strong>问题 1</strong>：对操作系统的要求</p>
-<ul>
-<li>某些功能与操作系统紧耦合，如统一的 buffer 管理</li>
-<li>某些功能需要操作系统的支持，如异步 I/O、条件变量（sleep lock）</li>
-</ul>
-<p class="break"></p>
-<p><strong>解决方法</strong>：增加操作系统抽象层</p>
-<ul>
-<li>使用 trait 对在 Linux 中由操作系统提供的功能进行抽象</li>
-<li>实际接入操作系统/用户态程序时实现兼容</li>
-</ul>
-</div>
-<p><img src="../assets/week9-sal.svg" alt="" /></p>
-<footer>OS Lab Report · Week 9</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="实现上的问题 &amp; 解决方法" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:实现上的问题 &amp; 解决方法;--theme:academic;">
-<header>实现上的问题 &amp; 解决方法</header>
-<div class="twocols">
-<p><strong>问题 2</strong>：从 C 到 Rust 的翻译</p>
-<ul>
-<li>某些数据结构（如链表）的 Rust 实现与 C 差别很大</li>
-<li>所有权与生命周期使得数据共享较为复杂</li>
-<li>goto 语句的翻译较为复杂<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-symbol">&#x27;l1</span>: <span class="hljs-keyword">loop</span> {
-  <span class="hljs-keyword">continue</span> <span class="hljs-symbol">&#x27;l1</span> <span class="hljs-comment">// goto</span>
-  <span class="hljs-keyword">break</span>;
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="JBD 介绍" data-header="文件系统 + JBD" data-theme="academic" data-marpit-pagination="6" data-marpit-pagination-total="24" style="--paginate:true;--footer:JBD 介绍;--header:文件系统 + JBD;--theme:academic;">
+<header>文件系统 + JBD</header>
+
+<p>文件系统需要进行的修改：</p>
+<p>① 提供访问文件缓存的接口（如果 JBD 作为独立模块）</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">get_buffer</span></span>(block_id: <span class="hljs-built_in">usize</span>, dev: Rc&lt;&amp;<span class="hljs-keyword">dyn</span> BlockDevice&gt;) -&gt; Rc&lt;<span class="hljs-keyword">dyn</span> Buffer&gt;;
+</span></span></foreignObject></svg></code></pre>
+<p>② 在修改一个 block 时调用 JBD 相应接口</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">write</span></span>(...) {
+    <span class="hljs-keyword">let</span> handle = journal_new_handle(); <span class="hljs-comment">// 原子操作</span>
+    modify_buffer();
+    handle.dirty_metadata(...);        <span class="hljs-comment">// 或 dirty_data();</span>
+    handle.stop();                     <span class="hljs-comment">// 结束原子操作</span>
 }
 </span></span></foreignObject></svg></code></pre>
-</li>
-</ul>
-<p class="break"></p>
-<p><strong>机遇</strong>：更可靠的实现</p>
-<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>spin_lock(&amp;journal-&gt;j_state_lock);
-sb-&gt;s_sequence = cpu_to_be32(journal-&gt;j_tail_sequence);
-sb-&gt;s_start    = cpu_to_be32(journal-&gt;j_tail);
-sb-&gt;s_errno    = cpu_to_be32(journal-&gt;j_errno);
-spin_unlock(&amp;journal-&gt;j_state_lock);
-</span></span></foreignObject></svg></code></pre>
-<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> states = <span class="hljs-keyword">self</span>.states.lock();
-sb.sequence = states.tail_sequence.to_be();
-sb.start = states.tail.to_be();
-sb.errno = states.errno.to_be();
-<span class="hljs-built_in">drop</span>(states) <span class="hljs-comment">// unlock</span>
-</span></span></foreignObject></svg></code></pre>
-</div>
-<footer>OS Lab Report · Week 9</footer>
+<footer>JBD 介绍</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="目前进展" data-theme="academic" data-marpit-pagination="8" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:目前进展;--theme:academic;">
-<header>目前进展</header>
-<small>
-<div class="twocols">
-<ul>
-<li>基本架构设计
-<ul>
-<li>磁盘数据结构</li>
-<li>配置（C 中的宏定义）</li>
-<li>系统兼容层</li>
-<li>日志管理</li>
-<li>事务处理</li>
-</ul>
-</li>
-<li>日志管理
-<ul>
-<li><code>init_dev</code>：构造内存中的 journal 对象</li>
-<li><code>create</code>：在磁盘上创建日志结构</li>
-<li><code>load</code>：读取磁盘上的日志结构</li>
-<li><code>recover</code>：故障恢复</li>
-<li><code>wipe</code>：擦除已有的日志</li>
-</ul>
-</li>
-</ul>
-<p class="break"></p>
-<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>.
-└── src
-    ├── disk.rs
-    ├── config.rs
-    ├── sal.rs
-    ├── journal.rs
-    ├── tx.rs
-    ├── ...
-</span></span></foreignObject></svg></code></pre>
-</div>
-</small>
-<footer>OS Lab Report · Week 9</footer>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-scope-jiqmPROU="" data-paginate="true" data-footer="JBD 介绍" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="24" style="--paginate:true;--footer:JBD 介绍;--theme:academic;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;../assets/week9-write-jbd.svg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="7" data-marpit-scope-jiqmPROU="" data-paginate="true" data-footer="JBD 介绍" data-theme="academic" data-marpit-pagination="7" data-marpit-pagination-total="24" style="--paginate:true;--footer:JBD 介绍;--theme:academic;" data-marpit-advanced-background="content"><footer>JBD 介绍</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="OS Lab Report · Week 9" data-header="下周计划 &amp; 总体目标" data-theme="academic" data-marpit-pagination="9" data-marpit-pagination-total="9" style="--paginate:true;--footer:OS Lab Report · Week 9;--header:下周计划 &amp; 总体目标;--theme:academic;">
-<header>下周计划 &amp; 总体目标</header>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo" data-marpit-pagination="7" data-marpit-pagination-total="24"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+<h2>具体工作</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="具体工作" data-header="实现方法" data-theme="academic" data-marpit-pagination="9" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法;--theme:academic;">
+<header>实现方法</header>
 
 <ul>
-<li>完善架构设计</li>
-<li>继续实现 JBD：事务处理</li>
+<li>参考 Linux 的 JBD 代码</li>
+<li>用 trait 接口替换 Linux 代码中的紧耦合调用</li>
+<li>调整为单线程代码</li>
 </ul>
-<p>目标：</p>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="具体工作" data-header="实现方法：① From C to Rust" data-theme="academic" data-marpit-pagination="10" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法：① From C to Rust;--theme:academic;">
+<header>实现方法：① From C to Rust</header>
+
+<p>① Linux 中大量代码为 C with class 实现，容易将其转换为 Rust struct</p>
+<div class="twocols">
+<p>C：</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">journal_dirty_data</span><span class="hljs-params">(
+    <span class="hljs-keyword">handle_t</span> *handle,
+    struct buffer_head *bh
+)</span>
+</span></span></span></foreignObject></svg></code></pre>
+<p class="break"></p>
+<p>Rust：</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span> Handle {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">dirty_data</span></span>(
+        buf: &amp;Rc&lt;<span class="hljs-keyword">dyn</span> Buffer&gt;
+    ) -&gt; JBDResult {...}
+}
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer="具体工作" data-header="实现方法：① From C to Rust" data-theme="academic" data-marpit-pagination="11" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法：① From C to Rust;--theme:academic;">
+<header>实现方法：① From C to Rust</header>
+<p>② 使用 Rust 特性实现更简洁、不易出错的代码</p>
+<div class="twocols">
+<p>C：</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>err = do_get_write_access(...);
+<span class="hljs-keyword">if</span> (err)
+    <span class="hljs-keyword">goto</span> out;
+</span></span></foreignObject></svg></code></pre>
+<p class="break"></p>
+<p>Rust：</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">self</span>.do_get_write_access(...)?;
+</span></span></foreignObject></svg></code></pre>
+</div>
+<p>当然，有时 Rust 代码更啰嗦...</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">let</span> jb_rc: Rc&lt;RefCell&lt;JournalBuffer&gt;&gt; = ...;
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> jb: RefMut&lt;JournalBuffer&gt; = jb_rc.borrow_mut();
+<span class="hljs-keyword">let</span> tx_rc: &amp;Rc&lt;RefCell&lt;Transaction&gt;&gt; = ...;
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> tx: RefMut&lt;Transaction&gt; = tx_rc.borrow_mut();
+</span></span></foreignObject></svg></code></pre>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="具体工作" data-header="实现方法：① From C to Rust" data-theme="academic" data-marpit-pagination="12" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法：① From C to Rust;--theme:academic;">
+<header>实现方法：① From C to Rust</header>
+<p>③ Rust 的所有权有时成为问题...</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">/* [j_list_lock] [jbd_lock_bh_state()] */</span>
+<span class="hljs-keyword">transaction_t</span> *b_transaction;
+<span class="hljs-comment">/* [t_list_lock] [jbd_lock_bh_state()] */</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">journal_head</span> *<span class="hljs-title">b_tnext</span>, *<span class="hljs-title">b_tprev</span>;</span>
+</span></span></foreignObject></svg></code></pre>
+<p>多重且共用的锁难以用 safe rust 实现...</p>
+<p>解决：使用 C 风格的锁，<s>或者只实现单线程</s></p>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="具体工作" data-header="实现方法：② 松耦合：trait" data-theme="academic" data-marpit-pagination="13" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法：② 松耦合：trait;--theme:academic;">
+<header>实现方法：② 松耦合：trait</header>
+<div class="twocols">
+<small>
+<p>Linux 中 JBD 与 Linux 是紧耦合的，且某些功能必须依赖于操作系统：</p>
+<pre><code class="language-c"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;buffer_head.h&gt;</span></span>
+<span class="hljs-keyword">if</span> (buffer_dirty(buf)) clear_buffer_dirty(bh);
+</span></span></foreignObject></svg></code></pre>
+<p>如何实现独立的模块？使用 trait 进行抽象！</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Buffer</span></span> {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">dirty</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">bool</span>;
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">clear_dirty</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">bool</span>;
+    ...
+}
+</span></span></foreignObject></svg></code></pre>
+</small>
+<p class="break"></p>
+<small>
+<p>带来的额外工作：使用时需要将已有的操作系统接口包装</p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">impl</span> Buffer <span class="hljs-keyword">for</span> BlockCache {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">dirty</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">bool</span> {
+        buffer_dirty(...)
+    }
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">clear_dirty</span></span>(&amp;<span class="hljs-keyword">mut</span> <span class="hljs-keyword">self</span>) {
+        clear_buffer_dirty(...);
+    }
+    ...
+}
+</span></span></foreignObject></svg></code></pre>
+<br />
+其他例子：sleep lock、get time...
+</small>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="具体工作" data-header="实现方法：③ 转换为单线程" data-theme="academic" data-marpit-pagination="14" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实现方法：③ 转换为单线程;--theme:academic;">
+<header>实现方法：③ 转换为单线程</header>
+
 <ul>
-<li>实现 Ext3 并接入 ArceOS</li>
-<li>可替换 Linux 中的紧耦合 JBD 模块
+<li>去掉所有锁操作</li>
+<li>将 <code>Arc&lt;Mutex&lt;_&gt;&gt;</code> 变为 <code>Rc&lt;RefCell&lt;_&gt;&gt;</code></li>
+<li>同步地进行 commit 和 checkpoint（性能 <img class="emoji" draggable="false" alt="⬇️" src="https://twemoji.maxcdn.com/2/svg/2b07.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="⬇️" src="https://twemoji.maxcdn.com/2/svg/2b07.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="⬇️" src="https://twemoji.maxcdn.com/2/svg/2b07.svg" data-marp-twemoji=""/>）</li>
+</ul>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="具体工作" data-header="实践：EasyFS + JBD" data-theme="academic" data-marpit-pagination="15" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实践：EasyFS + JBD;--theme:academic;">
+<header>实践：EasyFS + JBD</header>
+<div class="twocols">
 <ul>
-<li>与已有的文件系统（Ext3/4 等）兼容</li>
-<li>对抽象层设计与实现要求较高</li>
+<li><strong>超级块中记录日志位置和大小</strong></li>
+<li>使用 feature 增加日志功能</li>
+<li>使用 feature 决定是否开启数据日志</li>
+<li>实现 <code>BufferProvider</code> 等 trait 使得 JBD 可以使用文件系统/操作系统实现</li>
+</ul>
+<p class="break"></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">SuperBlock</span></span> {
+    magic: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> total_blocks: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> inode_bitmap_blocks: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> inode_area_blocks: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> data_bitmap_blocks: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> data_area_blocks: <span class="hljs-built_in">u32</span>,
+
+    <span class="hljs-keyword">pub</span> journal_start: <span class="hljs-built_in">u32</span>,
+    <span class="hljs-keyword">pub</span> journal_len: <span class="hljs-built_in">u32</span>,
+}
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer="具体工作" data-header="实践：EasyFS + JBD" data-theme="academic" data-marpit-pagination="16" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实践：EasyFS + JBD;--theme:academic;">
+<header>实践：EasyFS + JBD</header>
+<div class="twocols">
+<ul>
+<li>超级块中记录日志位置和大小</li>
+<li><strong>使用 feature 增加日志功能</strong></li>
+<li>使用 feature 决定是否开启数据日志</li>
+<li>实现 <code>BufferProvider</code> 等 trait 使得 JBD 可以使用文件系统/操作系统实现</li>
+</ul>
+<p class="break"></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+<span class="hljs-keyword">let</span> handle_rc = fs.journal_start(<span class="hljs-number">128</span>).unwrap();
+<span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> handle = handle_rc.as_ref().borrow_mut();
+
+<span class="hljs-keyword">self</span>.increase_size(
+    (offset + buf.len()) <span class="hljs-keyword">as</span> <span class="hljs-built_in">u32</span>, disk_inode, &amp;<span class="hljs-keyword">mut</span> fs,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    (<span class="hljs-keyword">self</span>.block_id <span class="hljs-keyword">as</span> <span class="hljs-built_in">u32</span>),
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    &amp;<span class="hljs-keyword">mut</span> handle,
+);
+<span class="hljs-keyword">let</span> size = disk_inode.write_at(
+    offset, buf, &amp;<span class="hljs-keyword">self</span>.block_device,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    &amp;<span class="hljs-keyword">mut</span> handle,
+    <span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+    <span class="hljs-literal">false</span>,
+);
+
+<span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+handle.stop().unwrap();
+<span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;journal&quot;</span>)]</span>
+fs.journal_commit();
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer="具体工作" data-header="实践：EasyFS + JBD" data-theme="academic" data-marpit-pagination="17" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实践：EasyFS + JBD;--theme:academic;">
+<header>实践：EasyFS + JBD</header>
+<div class="twocols">
+<ul>
+<li>超级块中记录日志位置和大小</li>
+<li>使用 feature 增加日志功能</li>
+<li><strong>使用 feature 决定是否开启数据日志</strong></li>
+<li>实现 <code>BufferProvider</code> 等 trait 使得 JBD 可以使用文件系统/操作系统实现</li>
+</ul>
+<p class="break"></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-meta">#[cfg(feature = <span class="hljs-meta-string">&quot;data&quot;</span>)]</span>
+handle.dirty_metadata(&amp;j_buf).unwrap();
+
+<span class="hljs-meta">#[cfg(not(feature = <span class="hljs-meta-string">&quot;data&quot;</span>))]</span>
+handle.dirty_data(&amp;j_buf).unwrap();
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer="具体工作" data-header="实践：EasyFS + JBD" data-theme="academic" data-marpit-pagination="18" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:实践：EasyFS + JBD;--theme:academic;">
+<header>实践：EasyFS + JBD</header>
+<div class="twocols">
+<ul>
+<li>超级块中记录日志位置和大小</li>
+<li>使用 feature 增加日志功能</li>
+<li>使用 feature 决定是否开启数据日志</li>
+<li><strong>实现 <code>BufferProvider</code> 等 trait 使得 JBD 可以调用文件系统/操作系统相关的实现</strong></li>
+</ul>
+<p class="break"></p>
+<pre><code class="language-rust"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">pub</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">CacheManagerWrapper</span></span>;
+
+<span class="hljs-keyword">impl</span> jbd::sal::BufferProvider <span class="hljs-keyword">for</span> CacheManagerWrapper {
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">get_buffer</span></span>(
+        &amp;<span class="hljs-keyword">self</span>,
+        dev: &amp;Rc&lt;<span class="hljs-keyword">dyn</span> jbd::sal::BlockDevice&gt;,
+        block_id: <span class="hljs-built_in">usize</span>,
+    ) -&gt; <span class="hljs-built_in">Option</span>&lt;Rc&lt;<span class="hljs-keyword">dyn</span> jbd::sal::Buffer&gt;&gt; {
+        block_cache_manager()
+            .get_block_cache(block_id, dev.clone())
+    }
+}
+</span></span></foreignObject></svg></code></pre>
+</div>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-footer="具体工作" data-header="性能" data-theme="academic" data-marpit-pagination="19" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:性能;--theme:academic;">
+<header>性能</header>
+
+<p>对 JBD 进行性能测试（写 512 个元数据/数据块，与直接写回相比）：</p>
+<ul>
+<li><strong>Metadata Journaling:</strong> 52%
+<ul>
+<li>额外状态的记录</li>
+<li>写日志的开销（≈1倍）</li>
 </ul>
 </li>
-<li>可替换 Linux 中的 Ext3</li>
+<li><strong>Data Journaling:</strong> 98%
+<ul>
+<li>额外状态的记录</li>
+<li>无写日志开销</li>
 </ul>
-<footer>OS Lab Report · Week 9</footer>
+</li>
+</ul>
+<p>瓶颈：单线程、同步写日志/检查点</p>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-footer="具体工作" data-header="Demo" data-theme="academic" data-marpit-pagination="20" data-marpit-pagination-total="24" style="--paginate:true;--footer:具体工作;--header:Demo;--theme:academic;">
+<header>Demo</header>
+
+<p>A shell that can crash</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>arceos:/$ echo hello &gt; a.txt
+...
+arceos:/$ crash
+[ 35.834442 0 jbd::recovery:97] Start recovery pass Scan
+[ 35.834796 0 jbd::recovery:97] Start recovery pass Revoke
+[ 35.834942 0 jbd::recovery:61] Recovery pass 1 complete, 0 revokes
+[ 35.835028 0 jbd::recovery:97] Start recovery pass Replay
+[ 35.836428 0 jbd::recovery:64] Recovery complete, recovered transactions 1 to 4
+[ 35.836602 0 jbd::recovery:70] Recovery stats: 7 replayed, 0 revoked, 0 revoke hits
+arceos:/$ ls
+-rwxr-xr-x        4 a.txt
+arceos:/$ cat a.txt
+hello
+</span></span></foreignObject></svg></code></pre>
+<footer>具体工作</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+<h2>总结与展望</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-footer="总结与展望" data-header="使用 Rust 重写 Linux 模块的优劣" data-theme="academic" data-marpit-pagination="22" data-marpit-pagination-total="24" style="--paginate:true;--footer:总结与展望;--header:使用 Rust 重写 Linux 模块的优劣;--theme:academic;">
+<header>使用 Rust 重写 Linux 模块的优劣</header>
+
+<p>优势：</p>
+<ul>
+<li>强大的抽象功能（易于松耦合，实现模块化）</li>
+<li>安全性</li>
+<li>语言库完善、易于引入第三方库</li>
+</ul>
+<p>劣势：</p>
+<ul>
+<li>追求性能需要相当多的 unsafe code</li>
+<li>不易实现某些 Linux 中的编程范式（链表、多重锁等）</li>
+</ul>
+<footer>总结与展望</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-footer="总结与展望" data-header="工作总结" data-theme="academic" data-marpit-pagination="23" data-marpit-pagination-total="24" style="--paginate:true;--footer:总结与展望;--header:工作总结;--theme:academic;">
+<header>工作总结</header>
+
+<p>成果：</p>
+<ul>
+<li>实现作为独立 crate 的 JBD，能用于任何操作系统/文件系统</li>
+<li>探索了 Linux 使用 Rust 进行模块化的可能性和方法</li>
+</ul>
+<p>不足：</p>
+<ul>
+<li>不支持多线程</li>
+<li>只支持阻塞 I/O</li>
+<li>仍有性能优化空间（如使用真正的链表）</li>
+<li>未能应用于 ext2 文件系统</li>
+</ul>
+<footer>总结与展望</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="lead" data-theme="academic" class="lead" style="--class:lead;--theme:academic;">
+<h2>Thanks! Questions?</h2>
 </section>
 <script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
 </script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@1.7.0/lib/bespoke.js.LICENSE.txt */
